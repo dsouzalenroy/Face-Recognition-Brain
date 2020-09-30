@@ -86,7 +86,7 @@ displayFaceBox = (box) => {
     // app.models.predict(
     //   Clarifai.FACE_DETECT_MODEL,
     //   this.state.input)
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://radiant-depths-32929.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -97,7 +97,7 @@ displayFaceBox = (box) => {
 
       .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://radiant-depths-32929.herokuapp.com/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
